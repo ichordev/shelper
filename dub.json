@@ -1,0 +1,11 @@
+{
+	"name": "shelper",
+	"description": "A helper library for managing bgfx shaders.",
+	"authors": ["Aya Partridge"],
+	"license": "BSL-1.0",
+	
+	"dependencies": {"bindbc-bgfx": ">=1.0.0"},
+	
+	"targetType": "staticLibrary",
+	"targetPath": "lib",
+}
