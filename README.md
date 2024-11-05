@@ -16,7 +16,7 @@ Shelper!() myShaders;
 
 You can set the `path` property to tell Shelper the location of your shader binaries.
 It defaults to the relative path `shaders/`.
-```
+```d
 myShaders.path = "assets/shaders"; //same as "./assets/shaders/"
 ```
 
