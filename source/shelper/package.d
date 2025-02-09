@@ -43,11 +43,11 @@ bgfx.ShaderHandle loadShader(string filePath){
 	const fileSize = filePath.getSize();
 	if(fileSize >= uint.max) throw new ShelperTooLongException(filePath, fileSize);
 	
-	auto memory = cast(bgfx.Memory*)bgfx.alloc(cast(uint)fileSize);
+	auto memory = bgfx.alloc(cast(uint)fileSize);
 	{
 		import std.stdio;
 		auto file = File(filePath.array, "rb");
-		const readResult = file.rawRead(memory.data[0..fileSize]);
+		const readResult = file.rawRead((cast(ubyte*)memory.data)[0..fileSize]);
 		assert(readResult.length == memory.size);
 	}
 	
